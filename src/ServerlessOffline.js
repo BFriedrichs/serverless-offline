@@ -136,6 +136,9 @@ module.exports = class ServerlessOffline {
           websocketPort: {
             usage: 'Websocket port to listen on. Default: 3001',
           },
+          invocationCommand: {
+            usage: 'Command used to run `invoke` handler. Default: local',
+          }
         },
       },
     };
@@ -296,6 +299,7 @@ module.exports = class ServerlessOffline {
       skipCacheInvalidation: false,
       useSeparateProcesses: false,
       websocketPort: 3001,
+      invocationCommand: 'local'
     };
 
     // In the constructor, stage and regions are set to undefined

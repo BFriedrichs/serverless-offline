@@ -11,7 +11,7 @@ const messageCallbacks = {};
 
 function runProxyHandler(funOptions, options) {
   return (event, context) => {
-    const args = ['invoke', 'local', '-f', funOptions.funName];
+    const args = ['invoke', options.invocationCommand, '-f', funOptions.funName];
     const stage = options.s || options.stage;
 
     if (stage) args.push('-s', stage);
